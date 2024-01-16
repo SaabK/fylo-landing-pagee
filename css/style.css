@@ -76,6 +76,7 @@ p {
 .layout {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
 }
 
 .text-content {
@@ -120,6 +121,12 @@ input::placeholder {
     font-size: 12px;
     font-family: var(--ff-heading);
     font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
 }
 
 .btn-primary {
@@ -137,6 +144,10 @@ input::placeholder {
     display: flex;
     gap: 0.35rem;
     align-items: center;
+}
+
+.cta:hover {
+    opacity: 0.85;
 }
 
 /* Header */
@@ -312,4 +323,119 @@ footer {
 
 .socials a:hover {
     background: rgba(255, 255, 255, 0.17);
+}
+
+@media (min-width: 1300px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding-block: 5rem;
+    }
+
+    .container {
+        max-width: 1300px;
+        padding-inline: 3rem;
+    }
+
+    .layout {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .input {
+        width: 100%;
+        padding: 0.75rem 1rem;
+    }
+
+    .text-content {
+        order: -1;
+        margin-top: 0;
+    }
+
+    .center {
+        text-align: left;
+        margin-inline: 0;
+    }
+
+    .cta {
+        font-size: 1rem;
+    }
+
+    /* Hero */
+
+    #hero form {
+        flex-direction: row;
+    }
+
+    /* Features */
+
+    #features {
+        margin-top: 5rem;
+    }
+
+    #features::before {
+        background: url("../images/bg-curve-desktop.svg");
+        background-size: cover;
+        background-position: center;
+
+        height: 6rem;
+        top: -4.25rem;
+    }
+
+    .quote {
+        margin-top: 1rem;
+    }
+
+    .quote > p {
+        font-size: 15px;
+        line-height: 22px;
+        margin-block: 0.65rem;
+    }
+
+    .profile img {
+        width: 2.5rem;
+    }
+
+    /* CTA */
+
+    #cta form {
+        margin-top: 0;
+        height: fit-content;
+    }
+
+    #cta form .btn {
+        width: fit-content;
+    }
+
+    /* Footer */
+
+    .footer__links {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        margin-block: 1.75rem 0;
+    }
+
+    .footer__links ul {
+        gap: 0.5rem;
+    }
+
+    .footer__links li {
+        font-size: 14px;
+    }
+
+    .socials {
+        margin-inline: 0;
+    }
 }
